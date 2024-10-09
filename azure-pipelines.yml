@@ -27,11 +27,11 @@ steps:
   inputs:
     script: |
       echo Test code quality
-      python3 -m venv myenv
+      sudo python3 -m venv myenv
       source myenv/bin/activate
-      pip3 install yapf flake8
-      python3 -m yapf -i app.py
-      python3 -m flake8 app.py
+      sudo pip3 install yapf flake8
+      sudo python3 -m yapf -i app.py
+      sudo python3 -m flake8 app.py
     workingDirectory: '$(Build.ArtifactStagingDirectory)'
   continueOnError: false
  
